@@ -1,6 +1,7 @@
 # live-pose
 
 Intel RealSense Depth Camera compatible Python package for live 6 DOF pose estimation.
+
 Forked from https://github.com/Kaivalya192/live-pose
 
 ## Table of Contents
@@ -13,7 +14,7 @@ Forked from https://github.com/Kaivalya192/live-pose
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/Kaivalya192/live-pose.git
+    git clone https://github.com/HealorCai/live-pose.git
     cd live-pose
     ```
 
