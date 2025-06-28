@@ -49,7 +49,7 @@ Forked from https://github.com/Kaivalya192/live-pose
 ### Running the Model
 
 1. **Run the live pose estimation**:
-   Clone the repo of [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO) and check the **TODO** in FoundationPose/get_6dpose.py
+   Clone the repo of [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO) and check the **TODO** in `FoundationPose/get_6dpose.py`
    ```sh
     bash get_6dpose.sh
     ```
