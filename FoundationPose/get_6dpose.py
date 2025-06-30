@@ -63,7 +63,7 @@ def main():
     # TODO: modify the task name
     task_name = "handover_and_insert_the_plate" 
 
-    task_folder = f'{path_to_PPI}/real_data/{task_name}'
+    task_folder = f'{path_to_PPI}/real_data/training_raw/{task_name}'
     obj_6dpose_folders = f'{task_folder}/obj_6dpose'
     
     episodes = sorted(glob.glob(f'{task_folder}/episode*'))
