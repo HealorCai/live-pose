@@ -14,8 +14,8 @@ from pdb import set_trace
 from groundingdino.util.inference import load_model, load_image, predict, annotate, Model
 import time
 
-# TODO: modify the path of real_world
-path_to_real_world = "/PATH/TO/real_world/"
+# TODO: modify your path to PPI
+path_to_PPI = "/PATH/TO/PPI"
 
 def main():
 
@@ -43,8 +43,8 @@ def main():
     glctx = dr.RasterizeCudaContext()
     est = FoundationPose(model_pts=mesh.vertices, model_normals=mesh.vertex_normals, mesh=mesh, scorer=scorer, refiner=refiner,glctx=glctx)
 
-    CONFIG_PATH = f"{path_to_real_world}/repos/GroundingDINO/groundingdino/config/GroundingDINO_SwinB_cfg.py"
-    CHECKPOINT_PATH = f"{path_to_real_world}/repos/GroundingDINO/weights/groundingdino_swinb_cogcoor.pth"
+    CONFIG_PATH = f"{path_to_PPI}/real_world_deployment/repos/GroundingDINO/groundingdino/config/GroundingDINO_SwinB_cfg.py"
+    CHECKPOINT_PATH = f"{path_to_PPI}/real_world_deployment/repos/GroundingDINO/weights/groundingdino_swinb_cogcoor.pth"
     
     gdino_model = load_model(CONFIG_PATH, CHECKPOINT_PATH)
     DEVICE = "cuda"  
@@ -63,7 +63,7 @@ def main():
     # TODO: modify the task name
     task_name = "handover_and_insert_the_plate" 
 
-    task_folder = f'{path_to_real_world}/real_data/{task_name}'
+    task_folder = f'{path_to_PPI}/real_data/{task_name}'
     obj_6dpose_folders = f'{task_folder}/obj_6dpose'
     
     episodes = sorted(glob.glob(f'{task_folder}/episode*'))
